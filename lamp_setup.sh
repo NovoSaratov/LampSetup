@@ -8,6 +8,12 @@ echo
 read -sp "Enter a password for phpMyAdmin user: " PHPMYADMIN_PASS
 echo
 
+# Prompt for database details
+read -p "Enter the name of the new database: " DB_NAME
+read -p "Enter the username for the new database: " DB_USER
+read -sp "Enter the password for the new database user: " DB_PASS
+echo
+
 # Update the system
 echo "Updating the system..."
 sudo apt update && sudo apt upgrade -y
@@ -33,10 +39,6 @@ echo "Restarting Apache..."
 sudo systemctl restart apache2
 
 # Set up MySQL database
-DB_NAME="testdb"
-DB_USER="testuser"
-DB_PASS="testpassword"
-
 echo "Creating MySQL database and user..."
 sudo mysql -u root -p$ROOT_PASS -e "CREATE DATABASE $DB_NAME;"
 sudo mysql -u root -p$ROOT_PASS -e "CREATE USER '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASS';"
@@ -125,4 +127,3 @@ echo "LAMP setup complete."
 echo "Visit http://your_server_ip to view the MySQL data."
 echo "Visit http://your_server_ip/phpmyadmin to manage the database."
 echo "Log in to phpMyAdmin with username: root and password: $ROOT_PASS"
-
