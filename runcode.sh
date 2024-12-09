@@ -1,2 +1,2 @@
-sudo ./setup_lamp_phpmyadmin_prompt.sh
+sudo ./lamp_setup.sh
 
