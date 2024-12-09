@@ -1,2 +1,2 @@
-chmod +x setup_lamp_phpmyadmin_prompt.sh
+chmod +x lamp_setup.sh
 
