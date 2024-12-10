@@ -14,6 +14,24 @@ This repository contains bash scripts to automate the installation and setup of 
 - Sudo or root access
 - Internet connection
 
+## Installation
+1. Clone the repository
+```bash
+git clone https://github.com/TheSaintLeon/LampSetup.git
+```
+2. Navigate to the repository directory
+```bash
+cd LampSetup
+```
+3. Make the scripts executable
+```bash
+chmod +x ./makexec.sh && ./makexec.sh
+```
+4. Run the main script
+```bash
+./runcode.sh
+```
+
 ## Components Installed
 - Apache Web Server
 - MySQL Database
