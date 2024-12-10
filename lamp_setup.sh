@@ -1,23 +1,5 @@
 #!/bin/bash
 
-# Prompt for new system username and password
-read -p "Enter a username for the new system user: " NEW_USER
-read -sp "Enter a password for the new system user: " NEW_USER_PASS
-echo
-
-# Create new system user and set password
-echo "Creating new system user..."
-sudo useradd -m -s /bin/bash "$NEW_USER"
-echo "$NEW_USER:$NEW_USER_PASS" | sudo chpasswd
-
-# Add the new user to the sudo group
-echo "Granting sudo privileges to the new user..."
-sudo usermod -aG sudo "$NEW_USER"
-
-# Change to the new user
-echo "Switching to the new user..."
-su - "$NEW_USER"
-
 # Prompt for MySQL root password
 read -sp "Enter a password for MySQL root user: " ROOT_PASS
 echo
@@ -155,3 +137,5 @@ echo "LAMP setup complete."
 echo "Visit http://your_server_ip to view the MySQL data."
 echo "Visit http://your_server_ip/phpmyadmin to manage the database."
 echo "Log in to phpMyAdmin with username: root and password: $ROOT_PASS"
+
+#
