@@ -31,10 +31,6 @@ chmod +x ./makexec.sh && ./makexec.sh
 ```bash
 chmod +x ./runcode.sh && ./runcode.sh
 ```
-5. Run the main script
-```bash
-./runcode.sh
-```
 
 ## Components Installed
 - Apache Web Server
