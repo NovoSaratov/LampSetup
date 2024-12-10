@@ -27,7 +27,11 @@ cd LampSetup
 ```bash
 chmod +x ./makexec.sh && ./makexec.sh
 ```
-4. Run the main script
+4. Make the scripts executable
+```bash
+chmod +x ./runcode.sh && ./runcode.sh
+```
+5. Run the main script
 ```bash
 ./runcode.sh
 ```
