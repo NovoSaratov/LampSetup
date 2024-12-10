@@ -137,3 +137,5 @@ echo "LAMP setup complete."
 echo "Visit http://your_server_ip to view the MySQL data."
 echo "Visit http://your_server_ip/phpmyadmin to manage the database."
 echo "Log in to phpMyAdmin with username: root and password: $ROOT_PASS"
+
+#
