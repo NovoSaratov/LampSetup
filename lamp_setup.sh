@@ -40,6 +40,16 @@ sudo apt update && sudo apt upgrade -y
 echo "Installing Apache..."
 sudo apt install apache2 -y
 
+# Install UFW
+echo "Installing UFW..."
+sudo apt install ufw -y
+
+# Configure UFW
+echo "Configuring UFW to allow necessary services..."
+sudo ufw allow OpenSSH
+sudo ufw allow 'Apache Full'
+sudo ufw enable
+
 # Install MySQL
 echo "Installing MySQL..."
 sudo apt install mysql-server -y
