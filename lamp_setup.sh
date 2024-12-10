@@ -133,9 +133,11 @@ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 echo "Restarting Apache to apply changes..."
 sudo systemctl restart apache2
 
-echo "LAMP setup complete."
-echo "Visit http://your_server_ip to view the MySQL data."
-echo "Visit http://your_server_ip/phpmyadmin to manage the database."
-echo "Log in to phpMyAdmin with username: root and password: $ROOT_PASS"
+# Get the server's IP address
+SERVER_IP=$(hostname -I | awk '{print $1}')
 
-#
+# Final output with dynamic IP
+echo "LAMP setup complete."
+echo "Visit http://$SERVER_IP to view the MySQL data."
+echo "Visit http://$SERVER_IP/phpmyadmin to manage the database."
+echo "Log in to phpMyAdmin with username: root and password: $ROOT_PASS"
