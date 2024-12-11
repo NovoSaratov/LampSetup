@@ -13,6 +13,7 @@ This repository contains bash scripts to automate the installation and setup of 
 - Linux operating system (Ubuntu/Debian recommended)
 - Sudo or root access
 - Internet connection
+- Git 
 
 ## Installation
 1. Clone the repository
